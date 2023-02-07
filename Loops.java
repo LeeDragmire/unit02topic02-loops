@@ -122,18 +122,8 @@ public class Loops {
     final int NTRIALS = n;
 
     for (int trials = 0; trials < NTRIALS; trials++) {
-      int [] array = new int[3];
       int prizeDoor = rand();
-      array[prizeDoor] = 1;
       int choice = rand();
-
-      int openDoorTest = rand();
-      while (openDoorTest == choice && openDoorTest == prizeDoor) {
-        openDoorTest = rand();
-      }
-      int openDoor = openDoorTest;
-      array[openDoor] = -1;
-
       if (choice == prizeDoor) {
         notSwitchPass++;
       }
